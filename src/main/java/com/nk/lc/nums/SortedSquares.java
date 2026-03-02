@@ -22,11 +22,14 @@ public class SortedSquares {
             int leftVal = nums[left];
             int rightVal = nums[right];
 
-            if (leftVal * leftVal >= rightVal * rightVal) {
-                result[i] = leftVal * leftVal;
+            int leftSquare = leftVal * leftVal;
+            int rightSquare = rightVal * rightVal;
+
+            if (leftSquare >= rightSquare) {
+                result[i] = leftSquare;
                 left ++;
             } else {
-                result[i] = rightVal * rightVal;
+                result[i] = rightSquare;
                 right--;
             }
         }
